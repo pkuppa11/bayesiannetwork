@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        html {min-height: 100vh; background: linear-gradient(rgb(54, 125, 43), rgb(159, 214, 159));}
+
+        #info {
+            background-color: antiquewhite;
+            padding: 30px; 
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Modeling Bayesian Networks: PomeGREATER</h1></center>
+    <br><br>
+    
+    <div id="info">
+    <center><p>
+        Upload the data by selecting "Choose File," then click "Upload File" to determine your results. The data must be a ".csv" file with in the format shown below.
+    </p></center>
+    <center>
+    <form method="POST" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        {{form.submit()}}
+        <br><br>
+        P(<input name="text">)
+    </form>
+    </center>
+    </div>
+    <br><br><br>
+    <center>
+    <img src="static/struct/csvstruct.png" height="351" width="422">
+    </center>
+
+</body>
+</html>

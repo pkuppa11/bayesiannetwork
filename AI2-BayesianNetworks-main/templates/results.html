@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {min-height: 100vh; background: linear-gradient(rgb(165, 90, 90), rgb(207, 157, 157));}
+        table {background-color: antiquewhite; padding:30px;}
+        thead {color:green;}
+        tbody {color:blue;}
+        tfoot {color:red;}
+        
+        table, th, td {
+          border: 1px solid black;
+          width: 50px;
+          height:25px;
+          text-align: center;
+        }
+        #all {
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1> Scores: </h1>
+    </center>
+    <center>
+    <div>
+        <table>
+        <thead>
+        <tr>
+            <th>Expression</th>
+            <th>Probability</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for k,v in results.items() %}
+               <tr> 
+                    <td>{{k}}</td>
+                    <td>{{v}}</td>
+               </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+    </center>
+</body>
+</html>
